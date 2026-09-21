@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Momo Corner | Wholesale Momo & Frozen Snacks Supplier</title>
+  <meta name="description" content="Kolkata's trusted wholesale supplier of ready-to-steam Momos, Spring Rolls, Cutlets & Sauces for Cafes, Restaurants & Stalls.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      --primary: #ffb703;
+      --primary-hover: #ffa200;
+      --accent-red: #d90429;
+      --whatsapp: #25d366;
+      --bg-dark: #0f1015;
+      --bg-card: #171821;
+      --bg-surface: #222433;
+      --text-white: #ffffff;
+      --text-muted: #a6abbd;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --border-highlight: rgba(255, 183, 3, 0.3);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', 'Noto Sans Bengali', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.5;
+      padding: 24px 16px 90px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Top Brand Card */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 28px 22px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-glow {
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(255, 183, 3, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Brand Header */
+    .brand-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .logo-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      margin: 0 auto 14px;
+      box-shadow: 0 8px 24px rgba(255, 183, 3, 0.25);
+      object-fit: cover;
+    }
+
+    .pill-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--primary);
+      background: rgba(255, 183, 3, 0.12);
+      border: 1px solid var(--border-highlight);
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .bengali-tagline {
+      font-family: 'Noto Sans Bengali', sans-serif;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+    }
+
+    /* Banner Image */
+    .banner-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    .banner-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Products Short Summary */
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .products-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .product-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .prod-icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .prod-details h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .prod-details p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .prod-price {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-top: 3px;
+    }
+
+    /* Contact Details Block */
+    .contact-box {
+      background: rgba(255, 183, 3, 0.05);
+      border: 1px solid var(--border-highlight);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-item strong {
+      color: var(--primary);
+      min-width: 75px;
+    }
+
+    .contact-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Primary CTA Buttons */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-wa {
+      background: var(--whatsapp);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-wa:hover {
+      background: #20ba59;
+    }
+
+    .btn-call {
+      background: linear-gradient(135deg, var(--primary) 0%, #ff9800 100%);
+      color: #000;
+      box-shadow: 0 4px 16px rgba(255, 183, 3, 0.3);
+    }
+
+    .btn-call:hover {
+      background: #ffaa00;
+    }
+
+    /* Footer text */
+    .footer-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 18px;
+    }
+
+    /* Sticky Bottom Bar for Mobile */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 16, 21, 0.98);
+      border-top: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 56px;
+      z-index: 100;
+    }
+
+    .sticky-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .sticky-call {
+      background: #1e212b;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .sticky-wa {
+      background: var(--whatsapp);
+    }
+
+    @media (min-width: 600px) {
+      .sticky-bar {
+        display: none;
+      }
+      body {
+        padding-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+      <div class="card-glow"></div>
+
+      <!-- Brand Header -->
+      <div class="brand-header">
+        <img src="logo.png" alt="Awesome Momo Corner Wholesale Logo" class="logo-img">
+        <div>
+          <span class="pill-badge">WHOLESALE FOOD SUPPLIER</span>
+          <h1>Awesome Momo Corner</h1>
+          <p class="tagline">Your Partner for Delicious Business Growth</p>
+          <p class="bengali-tagline">রেস্টুরেন্ট, ক্যাফে, ক্যাটারিং ও মোমো স্টলের বিশ্বস্ত পাইকারি পার্টনার</p>
+        </div>
+      </div>
+
+      <!-- Banner Graphic -->
+      <div class="banner-wrapper">
+        <img src="fb main banner.png" alt="Awesome Momo Corner Wholesale Banner">
+      </div>
+
+      <!-- Products Summary (Short & Crisp) -->
+      <div class="section-title">🥟 Our Products (Wholesale Supply)</div>
+      <div class="products-list">
+        <div class="product-item">
+          <span class="prod-icon">🥟</span>
+          <div class="prod-details">
+            <h3>Ready-to-Steam Momos (50 Pcs Packs)</h3>
+            <p>Chicken, Special Chicken, Chicken Gondhoraj, Chicken Cheese, Kurkure, Veg, Paneer & Mutton Momos.</p>
+            <span class="prod-price">Starts from ₹4 / piece (₹200 / 50 pcs pack)</span>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <span class="prod-icon">🍗</span>
+          <div class="prod-details">
+            <h3>Ready-to-Fry Snacks</h3>
+            <p>Kolkata Chicken Cutlet, Cocktail Cutlet, Spring Rolls, Chicken Popcorn, Drumsticks & Burger Patties.</p>
+            <span class="prod-price">High Margin Snacks for Cafes & Counters</span>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <span class="prod-icon">🌶️</span>
+          <div class="prod-details">
+            <h3>Sauces & Chutneys</h3>
+            <p>Pou Chong Red Momo Sauce (600ml), Bengali Kasundi, Tomato Ketchup & Veg Mayonnaise.</p>
+            <span class="prod-price">Bulk Wholesale Packs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Contact Details Card -->
+      <div class="contact-box">
+        <div class="contact-item">
+          <strong>📞 Phone:</strong>
+          <a href="tel:+919477040091">+91 9477040091</a>
+        </div>
+        <div class="contact-item">
+          <strong>💬 WhatsApp:</strong>
+          <a href="https://wa.me/919477040091?text=Hi%20Awesome%20Momo%20Corner,%20I%20want%20to%20know%20about%20Wholesale%20Momo%20Supply" target="_blank">+91 9477040091</a>
+        </div>
+        <div class="contact-item">
+          <strong>✉️ Email:</strong>
+          <a href="mailto:sujoybasu2025@gmail.com">sujoybasu2025@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>📍 Address:</strong>
+          <span>Dhopagachi More, Baruipur, Kolkata - 700144</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cta-grid">
+        <a href="https://wa.me/919477040091?text=Hi%20Awesome%20Momo%20Corner,%20I%20am%20interested%20in%20ordering%20Wholesale%20Momos%20for%20my%20business." target="_blank" class="btn btn-wa">
+          <span>💬</span> WhatsApp Us
+        </a>
+        <a href="tel:+919477040091" class="btn btn-call">
+          <span>📞</span> Call Direct
+        </a>
+      </div>
+
+      <p class="footer-note">© 2026 Awesome Momo Corner. All Rights Reserved. | awesomemomocorner.in</p>
+    </div>
+  </div>
+
+  <!-- Sticky Bottom Navigation for Mobile -->
+  <div class="sticky-bar">
+    <a href="tel:+919477040091" class="sticky-btn sticky-call">
+      <span>📞</span> Call Now
+    </a>
+    <a href="https://wa.me/919477040091?text=Hi%20Awesome%20Momo%20Corner,%20I%20want%20to%20know%20about%20Wholesale%20Momo%20supply" target="_blank" class="sticky-btn sticky-wa">
+      <span>💬</span> WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
