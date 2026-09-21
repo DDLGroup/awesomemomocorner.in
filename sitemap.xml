@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://awesomemomocorner.in/</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://awesomemomocorner.in/logo.png</image:loc>
+      <image:title>Awesome Momo Corner Wholesale Logo</image:title>
+      <image:caption>Awesome Momo Corner - Wholesale Momo in Kolkata</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://awesomemomocorner.in/fb-main-banner.png</image:loc>
+      <image:title>Wholesale Momo Supply Kolkata Banner</image:title>
+      <image:caption>Ready to steam wholesale momo and frozen snacks in Kolkata</image:caption>
+    </image:image>
+  </url>
+</urlset>

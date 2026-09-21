@@ -1,0 +1,22 @@
+# Robots.txt for Awesome Momo Corner Wholesale (awesomemomocorner.in)
+User-agent: *
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://awesomemomocorner.in/sitemap.xml
+
+# LLMs and AI Search Engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
